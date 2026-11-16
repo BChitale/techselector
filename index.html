@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Techselector – Find your tech path</title>
+  <meta name="description" content="Techselector helps you find the technology that matches your role: Frontend, Backend, AI/ML or UI/UX.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="nav-in">
+      <a class="logo" href="#top"><b>◆</b> Techselector</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#fields">Fields</a>
+        <a href="#overview">Overview</a>
+        <a href="#topics">Topics</a>
+        <a href="#resources">Resources</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="pill pill-white" href="#fields">Start learning</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO (JS splits it into tiles that break apart on scroll) -->
+    <section class="hero" id="hero" aria-label="Welcome"></section>
+    <template id="heroContent">
+      <div class="hero-content">
+        <div class="badge"><span class="dot"></span>New · 4 learning paths</div>
+        <h1 class="hero-title">Find your tech path with Techselector</h1>
+        <p class="hero-text">TECHSELECTOR is a platform where you can find your type of technology based on your role.</p>
+        <div class="cta">
+          <a class="pill pill-white" href="#fields">Choose a field</a>
+          <a class="pill pill-dark" href="#faq">How it works</a>
+        </div>
+      </div>
+    </template>
+    <div class="scroll-hint" aria-hidden="true">⬇ Scroll down</div>
+
+    <div class="container">
+      <!-- 1. CHOOSE A FIELD -->
+      <section class="section reveal" id="fields">
+        <h2 class="h2">Choose your field</h2>
+        <p class="sub">Pick the path that matches your role.</p>
+        <div class="btn-row" id="techButtons" role="group" aria-label="Technology fields"></div>
+      </section>
+
+      <!-- 2. OVERVIEW -->
+      <section class="section" id="overview">
+        <h2 class="h2 reveal" id="overviewTitle">Frontend at a glance</h2>
+        <div class="center reveal"><span class="badge" id="niceChoice"></span></div>
+        <div id="overviewContent" class="swap"></div>
+      </section>
+
+      <!-- 3. TOPICS -->
+      <section class="section" id="topics">
+        <h2 class="h2 reveal" id="topicsTitle">Explore topics</h2>
+        <p class="sub reveal" id="topicsSub"></p>
+        <div class="btn-row reveal" id="topicButtons" role="group" aria-label="Topics"></div>
+        <div id="topicDetail" class="swap"></div>
+      </section>
+
+      <!-- 4. RESOURCES -->
+      <section class="section reveal" id="resources">
+        <h2 class="h2">Learn from the best resources</h2>
+        <p class="sub">Trusted sites and tools used across all four fields.</p>
+        <div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+      </section>
+
+      <!-- 5. FAQ -->
+      <section class="section reveal" id="faq">
+        <h2 class="h2">Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What is Techselector?</summary>
+            <p>Techselector helps you find the technology path that matches your role. Pick a field, then explore topics, learning resources and video tutorials.</p>
+          </details>
+          <details>
+            <summary>How do I choose the right field?</summary>
+            <p>Think about what you enjoy. Like visuals and interaction? Try Frontend or UI/UX. Like logic, data and servers? Try Backend or AI/ML. You can switch fields at any time.</p>
+          </details>
+          <details>
+            <summary>Do I need to know coding for UI/UX?</summary>
+            <p>No. UI/UX starts with design principles, research and tools like Figma. Knowing a little HTML and CSS helps you work with developers, but it isn't required.</p>
+          </details>
+          <details>
+            <summary>Where should I start if I'm a complete beginner?</summary>
+            <p>Follow the roadmap shown for your field, start with the first step, and build a small project after each topic. Practice matters more than watching more videos.</p>
+          </details>
+          <details>
+            <summary>Can I learn more than one field?</summary>
+            <p>Yes. Many people combine them, for example Frontend with UI/UX, or Backend with AI/ML. Learn one properly first, then add another.</p>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="fgrid">
+        <div>
+          <div class="logo"><b>◆</b> Techselector</div>
+          <p>Find your type of technology based on your role.</p>
+        </div>
+        <div>
+          <div class="flabel">Fields</div>
+          <a href="#fields">Frontend</a>
+          <a href="#fields">Backend</a>
+          <a href="#fields">AI/ML</a>
+          <a href="#fields">UI/UX</a>
+        </div>
+        <div>
+          <div class="flabel">Resources</div>
+          <a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a>
+          <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a>
+          <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp</a>
+          <a href="https://www.geeksforgeeks.org/" target="_blank" rel="noopener">GeeksforGeeks</a>
+        </div>
+        <div>
+          <div class="flabel">Tools</div>
+          <a href="https://www.kaggle.com/learn" target="_blank" rel="noopener">Kaggle Learn</a>
+          <a href="https://help.figma.com/hc/en-us" target="_blank" rel="noopener">Figma Learn</a>
+          <a href="https://docs.streamlit.io/" target="_blank" rel="noopener">Streamlit</a>
+        </div>
+      </div>
+      <div class="copy"><span>© 2026 Techselector</span><span>Built with HTML, CSS and JavaScript</span></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
